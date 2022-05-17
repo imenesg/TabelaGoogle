@@ -1,5 +1,8 @@
 
 import "../assets/CSS/form.css"
+import "../assets/CSS/root.css"
+
+import alvo from "../assets/img/alvo.png"
 
 import React from "react";
 import {useState } from "react";
@@ -50,16 +53,19 @@ function Form(){
 
             setTimeout(() => {
                 setMensagemBotao("Enviar");
-                alert("Seus dados foram enviados para a planilha : https://docs.google.com/spreadsheets/d/1lzy6NQrXEg8PJdxuY1YWJXNVWOf-W_f1QR-EN6INWTQ/edit?usp=sharing")
+                alert("🎲Seus dados foram enviados para a planilha📝 : https://docs.google.com/spreadsheets/d/1lzy6NQrXEg8PJdxuY1YWJXNVWOf-W_f1QR-EN6INWTQ/edit?usp=sharing")
               }, "500")
         })
     }
     return(
         <div className="container">
+
+        <img className="alvo" src={alvo}></img>
+
             <form  onSubmit={funOnSubmit}>
             <h2>Bem vindo</h2>
             <input type={"text"} name={"Nome"} placeholder={"Nome"} onChange={funOnchang} value={nome} id={"setNome"}></input>
-            <input type={"text"} name={"Mensagem"} placeholder={"Mensagem bacana"} onChange={funOnchang} value={mensagem} id={"setMensagem"}></input>
+            <textarea maxlength="56" name={"Mensagem"} placeholder={"Mensagem bacana"} onChange={funOnchang} value={mensagem} id={"setMensagem"}></textarea>
             <input type={"tel"} name={"Telefone"} placeholder={"Telefone"} onChange={funOnchang} value={telefone} id={"setTelefone"}></input>
             <input type={"email"} name={"Email"} placeholder={"E-mail"} onChange={funOnchang} value={email} id={"setEmail"}></input>
 

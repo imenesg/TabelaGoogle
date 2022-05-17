@@ -1,66 +1,108 @@
 .container{
-    width: 100%;
+    
     padding: 1rem;
 
     display: flex;
     justify-content: center;
-}
 
+    flex-direction: column;
+}
+.container .alvo{
+    border: 10px solid var(--cor3);
+    border-radius: 50%;
+    max-width: 600px;
+}
 body{
-    background-color: rgb(211, 209, 209);
+    background-color: var(--cor1);
 }
 
 
 form{
-    background-color: rgb(255, 255, 255);
-
     width: 100%;
     max-width: 400px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     padding: 1rem;
-    border-radius: 1rem;
-
-    box-shadow: 5px 5px 10px rgba(134, 134, 134, 0.589);
-    
+    border-radius: 1rem; 
 }
 form h2{
-    font-family: sans-serif;
+    font-family: 'Merriweather Sans', sans-serif !important;
     font-weight: bold;
 
     margin: 2rem;
     font-size: 2rem;
-    color: #00A6FB;
+    color: var(--cor4);
 }
 form  input{
-    font-size: 1.2rem;
-    margin: .25rem;
-    border: none;
     background-color: unset;
-    padding: .5rem;
-    border-bottom: solid 2px rgba(59, 59, 59, 0.555);
-    
+    border: var(--cor2) solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-top:1rem;
+    font-size: 1.5rem;
+    color: var(--cor4);
+    font-family: 'Roboto Flex', sans-serif;
+}
+textarea{
+    font-family: 'Roboto Flex', sans-serif;
+    background-color: unset;
+    border: var(--cor2) solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-top:1rem;
+    font-size: 1.5rem;
+    color: var(--cor4);
+}
 
-}
-form  input::placeholder{
-    color: rgb(59, 59, 59);
-    
-}
 form  button{
     margin: 2rem;
 
     border: none;
+    width: 100%;
+   
+    background-color: var(--cor2);
 
-    background-image: linear-gradient(to right, #00A6FB , #02beac);
-    padding: 1rem 2rem;
-    border-radius: 999px;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
     color: #fff;
     cursor: pointer;
+    border: var(--cor2) solid 2px;
 }
 form  button:hover{
     transform: scale(1.1);
 }
+
+@media (min-width: 600px)
+{
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+    }
+    .container{
+        
+        max-width: 1200px;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .container .alvo{
+        border: 10px solid var(--cor3);
+        border-radius: 50%;
+        max-width: 600px;
+        order: 2;
+        width: 45%;
+    }
+    form{
+        width: 45%;
+    }
+}
+
