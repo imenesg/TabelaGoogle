@@ -60,7 +60,7 @@ function Form(){
     return(
         <div className="container">
 
-        <img className="alvo" src={alvo}></img>
+        <img className="alvo" src={alvo} alt="Um dardo indo em direção a um alvo"></img>
 
             <form  onSubmit={funOnSubmit}>
             <h2>Bem vindo</h2>
