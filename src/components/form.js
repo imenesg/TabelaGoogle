@@ -2,7 +2,7 @@
 import "../assets/CSS/form.css"
 import "../assets/CSS/root.css"
 
-import alvo from "../assets/img/alvo.png"
+import alvo from "../assets/img/alvo.svg"
 
 import React from "react";
 import {useState } from "react";
@@ -58,9 +58,12 @@ function Form(){
         })
     }
     return(
-        <div className="container">
+        <div className="container"> 
 
-        <img className="alvo" src={alvo} alt="Um dardo indo em direção a um alvo"></img>
+        
+            <img className="alvo" src={alvo} alt="Um dardo indo em direção a um alvo"></img>
+        
+        
 
             <form  onSubmit={funOnSubmit}>
             <h2>Bem vindo</h2>
