@@ -65,7 +65,7 @@ function Form(){
             <form  onSubmit={funOnSubmit}>
             <h2>Bem vindo</h2>
             <input type={"text"} name={"Nome"} placeholder={"Nome"} onChange={funOnchang} value={nome} id={"setNome"}></input>
-            <textarea maxlength="56" name={"Mensagem"} placeholder={"Mensagem bacana"} onChange={funOnchang} value={mensagem} id={"setMensagem"}></textarea>
+            <textarea maxlength="80" name={"Mensagem"} placeholder={"Mensagem bacana"} onChange={funOnchang} value={mensagem} id={"setMensagem"}></textarea>
             <input type={"tel"} name={"Telefone"} placeholder={"Telefone"} onChange={funOnchang} value={telefone} id={"setTelefone"}></input>
             <input type={"email"} name={"Email"} placeholder={"E-mail"} onChange={funOnchang} value={email} id={"setEmail"}></input>
 
